@@ -1,0 +1,55 @@
+from turtle import *
+import colorsys
+import math
+
+header_text= ""
+color("white")
+penup()
+goto(-18, 250)
+pendown()
+write(header_text, align="center", font=("Arial",12,"normal"))
+
+speed (1000)
+bgcolor("black")
+h =0
+ #Dibujar el tallo
+penup()
+goto(0, -100)
+pendown()
+color("green")
+begin_fill()
+rt(90)
+fd(400)
+lt(90)
+fd(20)
+lt(90)
+fd(400)
+lt(90)
+fd(20)
+end_fill()
+ 
+ #Girasol
+penup()
+goto(0, 0)
+pendown()
+for i in range (12):
+    for j in range (23):
+        color("yellow")
+        h +=0.005
+        rt(90)
+        circle(140 - j *6, 90)
+        lt (90)
+        circle(140 - j *6, 90)
+        rt(180)
+    circle(45, 30)
+#Centro     
+penup()
+goto(0, -0)
+pendown()
+color("black") 
+fillcolor("brown")
+begin_fill()
+circle(45)
+end_fill()
+ 
+done()
